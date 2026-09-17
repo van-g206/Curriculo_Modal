@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formata.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap"rel="stylesheet">
+    <title>Página de Curriculo</title>
+</head>
+
+<body>
+    <aside class="retangulo">
+        <img class="foto-curriculo" src="imagens/img01.jpg" alt="Foto de Vanessa Thamiris Machado de Oliveira">
+
+        <div class="conteudo">
+            <section class="sobre-mim">
+                <ul>
+                    <h4>Sobre</h4>
+                    <p> Estudante de Análise e Desenvolvimento de<br>Sistemas, dedicando meus estudos e minha<br>paixão
+                        ao
+                        desenvolvimento web e ao<br>universo da tecnologia.</p>
+                </ul>
+            </section>
+            <section class="contato">
+                <ul>
+                    <h4>Contato</h4>
+                    <p class="contato-item"><i class="fa-solid fa-phone"></i>(18) 99790-8412</p>
+                    <p class="contato-item"><i class="fa-solid fa-envelope"></i>vanessathamiriss@gmail.com</p>
+                    <a href="https://github.com/van-g206" target="_blank" rel="noopener noreferrer">
+                        <p class="contato-item"><i class="fa-brands fa-github"></i>https://github.com/van-g206</p>
+                    </a>
+                    </ul>
+            </section>
+            <section class="formacao">
+                <ul>
+                    <h4>Educação</h4>
+                    <p>2022 – 2024<br>
+                        Maria Magdalena de Oliveira<br>Dona Cota EE<br>
+                        <i>concluído</i>
+                    </p>
+                    <p>2022 – 2024<br>
+                        Desenvolvimento de Sistemas –<br>Pedro D´Arcádia Neto<br>
+                        <i>concluído</i>
+                    </p>
+                    <p> 2026 - 2028<br>
+                        ADS – Universidade Tecnológica<br>Federal do Paraná (UTFPR)<br>
+                        <i>concluíndo</i>
+                    </p>
+                </ul>
+            </section>
+        </div>
+    </aside>
+
+    <main>
+        <div class="conteudo-2">
+            <section class="nome">
+                <h1>VANESSA THAMIRIS<br> MACHADO DE OLIVEIRA </h1>
+                <h6>ESTUDANTE DE ANÁLISE E DESENVOLVIMENTO DE SISTEMA</h6>
+            </section>
+            <section class="objetivo">
+                <h4>OBJETIVO</h4>
+                <p>Desenvolvedor web com paixão por criar experiências digitais incríveis e soluções inovadoras.</p>
+            </section>
+            <section class="experiencia">
+                <h4>EXPERIÊNCIA</h4>
+                <strong>
+                    <p>Auxiliar de Laboratório Fitoway<br> 2025 – 2026 (7 meses)
+                </strong></p>
+                <ul>
+                    <li>Atuação na linha de operação, garantindo o cumprimento de metas de produção com foco em
+                        qualidade e eficiência.</li>
+                    <li>Monitoramento de processos e organização do posto de trabalho.</li>
+                </ul>
+                <strong>
+                    <p>Aprendiz de Almoxarife<br>2022 - 2023</p>
+                </strong>
+                <ul>
+                    <li>Controlede estoque, recebimento e conferência de materiais.</li>
+                    <li>Organização logística e suporte ao inventário.</li>
+                </ul>
+            </section>
+            <section class="habilidades">
+                <h4>HABILIDADES TÉCNICAS E INTERPESSOAIS </h4>
+                <p><strong>Análise & Planejamento:</strong> Elaboração de Casos de Uso para levantamento de requisitos e
+                    modelagem de regras de negócio.</p>
+                <p><strong>Desenvolvimento Web:</strong> Domínio de HTML5 e CSS3 com foco em interfaces personalizadas e
+                    elementos animados.</p>
+                <p><strong>Linguagens de Programação:</strong> JavaScript — desenvolvimento de lógica e funcionalidades
+                    interativas.</p>
+                <p><strong>Mobile & PWA:</strong> Criação de Progressive Web Apps (PWA) e conversão para APK via
+                    PWABuilder.</p>
+                <p><strong>Redes & Segurança:</strong> Conhecimento em configuração e uso de VPN e Firewall; noções
+                    básicas de protocolos de rede (TCP/IP, DNS, HTTP).</p>
+                <ul>
+                    <li>Pro atividade;</li>
+                    <li>Facilidade em aprender;</li>
+                    <li>Trabalho em equipe;</li>
+                    <li>Comunicação eficaz;</li>
+                </ul>
+            </section>
+
+            <button type="button" id="abrir-modal">Enviar informações de contato</button>
+
+            <dialog id="modal-contato">
+                <form id="form-contato" method="dialog" novalidate>
+                    <h2>Formulário de contato</h2>
+
+                    <p>
+                        <label for="nome-completo">Nome completo:</label><br />
+                        <input type="text" id="nome-completo" name="nome-completo" />
+                    </p>
+
+                    <p>
+                        <label for="instagram">Link para o Instagram:</label><br />
+                        <input type="url" id="instagram" name="instagram" placeholder="https://www.instagram.com/seu-usuario" />
+                    </p>
+
+                    <p>
+                        <label for="whatsapp">Número do WhatsApp:</label><br />
+                        <input type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 00000-0000" />
+                    </p>
+
+                    <button type="submit">Enviar</button>
+                    <button type="button" id="fechar-modal">Fechar</button>
+                </form>
+            </dialog>
+        </div>
+    </main>
+
+    <script>
+        const modal = document.getElementById('modal-contato');
+        const abrirModal = document.getElementById('abrir-modal');
+        const fecharModal = document.getElementById('fechar-modal');
+        const formulario = document.getElementById('form-contato');
+        const nomeCompleto = document.getElementById('nome-completo');
+        const instagram = document.getElementById('instagram');
+        const whatsapp = document.getElementById('whatsapp');
+
+        abrirModal.addEventListener('click', () => modal.showModal());
+        fecharModal.addEventListener('click', () => modal.close());
+
+        formulario.addEventListener('submit', (evento) => {
+            evento.preventDefault();
+
+            const instagramValido = /^https:\/\/(www\.)?instagram\.com\/.+/.test(instagram.value.trim());
+
+            if (nomeCompleto.value.trim() === '') {
+                alert('Informe o nome completo.');
+                nomeCompleto.focus();
+                return;
+            }
+
+            if (!instagramValido) {
+                alert('Informe um link válido do Instagram, começando com https://instagram.com/.');
+                instagram.focus();
+                return;
+            }
+
+            if (whatsapp.value.trim() === '') {
+                alert('Informe o número do WhatsApp.');
+                whatsapp.focus();
+                return;
+            }
+
+            alert('Formulário enviado com sucesso!');
+            formulario.reset();
+            modal.close();
+        });
+    </script>
+</body>
+</html>
